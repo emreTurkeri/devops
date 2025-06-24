@@ -13,16 +13,16 @@ public class ExampleMapper {
 
     public static ExampleDto toDto(ExampleRequest exampleRequest) {
         return ExampleDto.builder()
-                .name(exampleRequest.getName())
+                .name(exampleRequest.name())
                 .build();
     }
 
     public static ExampleResponse toResponse(ExampleDto exampleDto) {
         return ExampleResponse.builder()
-                .id(exampleDto.getId())
-                .created(exampleDto.getCreated())
-                .modified(exampleDto.getModified())
-                .name(exampleDto.getName())
+                .id(exampleDto.id())
+                .created(exampleDto.created())
+                .modified(exampleDto.modified())
+                .name(exampleDto.name())
                 .build();
     }
 

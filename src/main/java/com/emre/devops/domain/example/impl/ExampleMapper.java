@@ -9,16 +9,16 @@ public class ExampleMapper {
     }
 
     public static ExampleDto toDto(Example example) {
-        return ExampleDto.builder()
-                .id(example.getId())
-                .created(example.getCreated())
-                .modified(example.getModified())
-                .name(example.getName())
-                .build();
+        return new ExampleDto(
+                example.getId(),
+                example.getCreated(),
+                example.getModified(),
+                example.getName()
+        );
     }
 
     public static Example toEntity(Example example, ExampleDto exampleDto) {
-        example.setName(exampleDto.getName());
+        example.setName(exampleDto.name());
         return example;
     }
 }

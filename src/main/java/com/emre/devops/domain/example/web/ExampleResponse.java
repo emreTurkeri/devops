@@ -1,19 +1,11 @@
 package com.emre.devops.domain.example.web;
 
-import lombok.*;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Setter
-@Getter
-@RequiredArgsConstructor
 @Builder
-@ToString
-public class ExampleResponse {
-    private final UUID id;
-    private final LocalDateTime created;
-    private final LocalDateTime modified;
-    private final String name;
+public record ExampleResponse(UUID id, LocalDateTime created, LocalDateTime modified, String name) {
 }
     

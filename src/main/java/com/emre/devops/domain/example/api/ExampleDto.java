@@ -1,20 +1,13 @@
 package com.emre.devops.domain.example.api;
 
-import lombok.*;
+
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Setter
-@Getter
-@RequiredArgsConstructor
 @Builder
-@ToString
-public class ExampleDto {
-
-    private final UUID id;
-    private final LocalDateTime created;
-    private final LocalDateTime modified;
-    private final String name;
+public record ExampleDto(UUID id, LocalDateTime created,
+                         LocalDateTime modified, String name) {
 }
     

@@ -53,7 +53,7 @@ public class ExampleServiceImpl implements ExampleService {
     }
 
     private Example setExample(Example example, ExampleDto dto) {
-        example.setName(dto.getName());
+        example.setName(dto.name());
         return example;
     }
 }

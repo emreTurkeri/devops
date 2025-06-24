@@ -1,14 +1,8 @@
 package com.emre.devops.domain.example.web;
 
-import lombok.*;
+import lombok.Builder;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-@ToString
-public class ExampleRequest {
-    private String name;
+public record ExampleRequest(String name) {
 }
     
